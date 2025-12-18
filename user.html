@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="userDashboard" class="screen active">
+
+        <nav class="navbar">
+            <div class="nav-brand">User Dashboard</div>
+            <div class="nav-user">
+                <span id="userUsername"></span>
+                <button id="userLogout" class="btn-secondary">Logout</button>
+            </div>
+        </nav>
+
+        <div class="dashboard-container">
+            <div class="sidebar">
+                <button class="sidebar-btn active" data-section="user-notifications">
+                    <span class="icon">🔔</span>
+                    Notifications
+                    <span class="badge" id="notifBadge">0</span>
+                </button>
+
+                <button class="sidebar-btn" data-section="user-documents">
+                    <span class="icon">📁</span>
+                    Documents
+                </button>
+
+                <button class="sidebar-btn" data-section="user-chat">
+                    <span class="icon">💬</span>
+                    Chat
+                    <span class="badge" id="chatBadge">0</span>
+                </button>
+            </div>
+
+            <div class="content-area">
+
+                <!-- Notifications -->
+                <div id="userNotificationsSection" class="section active">
+                    <h2>Notifications</h2>
+                    <div id="userNotifList" class="notifications-list"></div>
+                </div>
+
+                <!-- Documents -->
+                <div id="userDocumentsSection" class="section">
+                    <h2>Documents</h2>
+                    <div id="userDocList" class="documents-grid"></div>
+                </div>
+
+                <!-- Chat -->
+                <div id="userChatSection" class="section">
+                    <h2>Chat with Admin</h2>
+                    <div class="chat-window-full">
+                        <div class="chat-messages" id="userChatMessages"></div>
+                        <div class="chat-input-area">
+                            <input type="text" id="userChatInput" placeholder="Type a message...">
+                            <button id="userSendMsg" class="btn-primary">Send</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
